@@ -52,5 +52,66 @@ button[type='submit']{
     border-radius: 0px 5px 5px 0px;
     font-size: 14px;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 400;
+    transition: 0.5s ease;
+}
+button[type='submit']:hover{
+    background-color: rgb(72, 100, 226);
+    color: white;
+}
+.alert{
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 3px 100px;
+    border-radius: 3px;
+    color: white;
+    margin-top: 10px;
+    visibility: hidden;
+}
+.alert-success{
+    background-color: rgb(29, 155, 29);
+    visibility: visible;
+}
+.alert-danger{
+    background-color: rgb(248, 56, 56);
+    visibility: visible;
+}
+.container{
+    width: 100%;
+    margin-top: 1rem;
+    visibility: hidden;
+}
+.show-cont{
+    visibility: visible;
+}
+.container *{
+    padding-left: 20px;
+}
+.edit-btn,
+.del-btn{
+    border: none;
+    background-color: transparent;
+}
+ul{
+    width: 80%;
+}
+.items{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.clear{
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 20px;
+}
+.not{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.full{
+    font-size: 18px;
 }
