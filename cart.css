@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: rgb(247, 237, 237);
+}
+section{
+    margin-top: 30px;
+    box-shadow: 2px 2px  5px rgb(206, 195, 195),
+                -2px -2px 5px rgb(206, 195, 195) ;
+    min-width: 450px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: white;
+}
+header h2{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+input::placeholder{
+    padding-left: 2px;
+    
+}
+input{
+    border: none;
+    background-color: rgb(247, 237, 237);
+    padding: 4px 30px;
+}
+.mid{
+    margin-top: 15px;
+    list-style: none;
+}
+button[type='submit']{
+    border: none;
+    background-color: skyblue;
+    padding: 6px 3px; 
+    display: inline-block;
+    margin-left: -5px;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
