@@ -115,10 +115,12 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--grat);
     position: relative;
     left: 30px;
     margin-bottom: 2px;
+}
+.items:hover{
+    background-color: var(--grat);
 }
 .clear{
     text-align: center;
@@ -135,7 +137,7 @@ ul{
 }
 .full{
     font-size: 18px;
-    max-width: 6rem;
+    max-width: 7rem;
     margin: 5px;
 }
 
