@@ -48,16 +48,14 @@ function addItem(e){
 
         deleteBtn.addEventListener('click',deleteItem);
         editBtn.addEventListener('click',editItem);
-
+        
         // append child
         list.appendChild(li)
 
         // add color
         say('item added','alert-success')
-
         container.classList.add('show-cont')
 
-        
         // add to local storage
         addToLocalStorage(id,value)
 
@@ -66,7 +64,11 @@ function addItem(e){
     }
 
     else if(value && editFlag === true){
-        console.log('editing')
+       editElement.innerHTML=value
+       say('value changed','alert-success')
+    //    edit local storage
+       editLocalStorage(editId,value)
+       setToDefault()
     }
 
     else{
@@ -82,32 +84,35 @@ function say(text,action){
         pop.classList.add(action)
         setTimeout(()=>{
             pop.classList.remove(action)
-
-        },2000)
-    
+        },2000) 
 }
 
 function deleteItem(e){
     const element=e.currentTarget.parentElement.parentElement;
+    let id=element.dataset.id
     list.removeChild(element)
     say('item removed','alert-success')
 
     if(list.children.length===0){
         container.classList.remove('show-cont')
-        say('list cleared','cleart')
-       
+        say('list cleared','cleart')   
     }
-    
+    setToDefault() 
 }
 
-function editItem(){
-    console.log('editing')
+function editItem(e){
+    const element=e.currentTarget.parentElement.parentElement;
+
+    // set edit item
+    editElement=e.currentTarget.parentElement.previousElementSibling;
+    inp.value=editElement.innerHTML;
+
+    editFlag=true;
+    editId=element.dataset.id
+    subBtn.textContent='edit'
 }
 
-// add to local storage
-function addToLocalStorage(){
-    console.log('add to storage')
-}
+
 
 // set back to default
 function setToDefault(){
@@ -125,7 +130,18 @@ function clearItems(){
         })
         container.classList.remove('show-cont')
         say('list cleared','cleart')
-        // localStorage.removeItem('list')
+        // removeFromLocalStorage(id)
     }
 }
 
+// add to local storage
+function addToLocalStorage(id,value){
+    console.log('add to storage')
+}
+
+function removeFromLocalStorage(id){
+
+}
+function editLocalStorage(id,value){
+    
+}
